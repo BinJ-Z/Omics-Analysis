@@ -9,32 +9,11 @@ library(BiocParallel)
 
 project_dir <- "/Users/bohe/Desktop/Metabolomics"
 
-raw_data_dir <- file.path(
-  project_dir,
-  "Raw_data",
-  "MTBLS12932_LCMS_RAW"
-)
+raw_data_dir <- file.path(project_dir, "Raw_data", "MTBLS12932_LCMS_RAW")
+processing_dir <- file.path(project_dir, "Data_processing", "MTBLS12932_XCMS")
 
-processing_dir <- file.path(
-  project_dir,
-  "Data_processing",
-  "MTBLS12932_XCMS"
-)
-
-
-
-dir.create(
-  file.path(processing_dir, "positive"),
-  recursive = TRUE,
-  showWarnings = FALSE
-)
-
-dir.create(
-  file.path(processing_dir, "negative"),
-  recursive = TRUE,
-  showWarnings = FALSE
-)
-
+dir.create(file.path(processing_dir, "positive"), recursive = TRUE, showWarnings = FALSE)
+dir.create(file.path(processing_dir, "negative"), recursive = TRUE, showWarnings = FALSE)
 
 
 
@@ -461,9 +440,7 @@ negative_feature_information <- negative_feature_information[
   drop = FALSE
 ]
 
-negative_feature_information$Feature_ID <- rownames(
-  negative_feature_information
-)
+negative_feature_information$Feature_ID <- rownames(negative_feature_information)
 
 negative_feature_information <- negative_feature_information[
   ,
@@ -487,10 +464,7 @@ negative_peak_area <- featureValues(
   filled = TRUE
 )
 
-negative_peak_area <- as.data.frame(
-  negative_peak_area,
-  check.names = FALSE
-)
+negative_peak_area <- as.data.frame(negative_peak_area, check.names = FALSE)
 
 colnames(negative_peak_area) <- negative_sample_names
 
