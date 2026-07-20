@@ -76,7 +76,6 @@ do
 
     if [ ! -f "${idxml}" ]; then
 
-        echo "MSFraggerAdapter: ${sample}"
 
         MSFraggerAdapter \
             -license yes \
@@ -100,12 +99,7 @@ do
     fi
 
 done
-
-
-# Move MSFragger mzBIN files
-
-mv "${MZML_DIR}"/*_uncalibrated.mzBIN \
-   "${MZBIN_OUT}/" 2>/dev/null || true
+mv "${MZML_DIR}"/*_uncalibrated.mzBIN "${MZBIN_OUT}/" 2>/dev/null || true
 
 
 # 4. PeptideIndexer
@@ -179,7 +173,6 @@ do
 
     if [ ! -f "${featurexml}" ]; then
 
-        echo "FeatureFinderIdentification: ${sample}"
 
         FeatureFinderIdentification \
             -in "${mzml}" \
@@ -240,8 +233,6 @@ fi
 
 if [ ! -f "${CONSENSUS_FILE}" ]; then
 
-    echo "FeatureLinkerUnlabeledKD"
-
     FeatureLinkerUnlabeledKD \
         -in "${ALIGNED_FILES[@]}" \
         -out "${CONSENSUS_FILE}" \
@@ -255,9 +246,6 @@ fi
 
 
 if [ ! -f "${PROTEIN_CSV}" ]; then
-
-    echo "ProteinQuantifier"
-
     ProteinQuantifier \
         -in "${CONSENSUS_FILE}" \
         -out "${PROTEIN_CSV}" \
