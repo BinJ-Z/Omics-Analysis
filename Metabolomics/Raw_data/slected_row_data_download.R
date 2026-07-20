@@ -1,17 +1,9 @@
 
 setwd("/Users/bohe/Desktop/Metabolomics/Raw_data")
 
-dir.create(
-  "MTBLS12932_LCMS_RAW/positive",
-  recursive = TRUE,
-  showWarnings = FALSE
-)
+dir.create("MTBLS12932_LCMS_RAW/positive", recursive = TRUE, showWarnings = FALSE)
 
-dir.create(
-  "MTBLS12932_LCMS_RAW/negative",
-  recursive = TRUE,
-  showWarnings = FALSE
-)
+dir.create("MTBLS12932_LCMS_RAW/negative", recursive = TRUE, showWarnings = FALSE)
 
 
 options(timeout = 86400)
