@@ -1,0 +1,14 @@
+conda activate sra_download
+cd "/Users/bohe/Desktop/CRC ssRNA/ssRNA_data"
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR995/000/ERR9959180/ERR9959180_2.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR992/003/ERR9922403/ERR9922403_2.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR996/002/ERR9963032/ERR9958539_2.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR992/004/ERR9923004/ERR9923004_1.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR996/002/ERR9963032/ERR9958539_1.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR992/003/ERR9922403/ERR9922403_1.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR992/006/ERR9928706/ERR9928706_1.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR996/009/ERR9962529/ERR9962529_2.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR995/000/ERR9959180/ERR9959180_1.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR992/004/ERR9923004/ERR9923004_2.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR996/009/ERR9962529/ERR9962529_1.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR992/006/ERR9928706/ERR9928706_2.fastq.gz
